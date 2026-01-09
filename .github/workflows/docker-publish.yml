@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile
+          file: ./docker/Dockerfile.gpu
           push: true
           # Aqui ele pega seu usuário automaticamente do secret para nomear a imagem
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/chatterbox-tts-api:latest
